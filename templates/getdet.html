@@ -1,0 +1,133 @@
+{% load static %}
+
+<!doctype html>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FARM IN ARMS</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}" media="screen and (max-width : 568px)">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/location.js' %}">  -->
+	<style>
+	.loc{
+	text-align: center;
+	margin-left: 3cm;
+	
+	color:teal;
+	}
+	.loc button{
+		float: left;
+		margin-left: 3cm;
+	}
+	</style>
+</head>
+<body>
+	<div id="header"> 
+		<a href="/pages/" class="logo">
+			<img src="{% static 'images/logo.png' %}" alt="">
+		</a>
+		<p id='tex'>Translate to:</p>
+		<div id="gtranslate"></div>
+		
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'gtranslate');
+}
+</script>
+
+	
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+		<ul id="navigation">
+			<li>
+				<a href="/pages/">home</a>
+			</li>
+			<li>
+				<a href="/pages/about/">about</a>
+			</li>
+			<li>
+				<a href="/pages/schemes/">Programmes & Schemes</a>
+			</li>
+			<li>
+				<a href="#services">Services</a>
+			</li>
+			{% if user.is_authenticated %}
+			<div class="dropdown">
+				<button class="dropbtn">Hello, {{user.first_name}}</button>
+				<div class="dropdown-content" style="right:0;">
+				  
+				  <a href="/accounts/logout/">Log out</a>
+				</div>
+			  </div>
+			{% else %}
+			<li>
+				<a href="/accounts/register/">Sign In/Register</a>
+			</li>
+			{% endif %}
+		</ul>
+	</div> 
+	<div>
+		<center>
+			
+			<a href="/weather/rice">RICE</a>
+
+				<form action="" method="post">
+						{% csrf_token %}
+					<div class="mb-3 ">
+					<input type="text" name="cname" class="form-control" placeholder="Town/Village Name">
+					</div>
+					<div class="mb-3" style="padding: 0.5cm;">
+						<input type="number" name="zcode" class="form-control" placeholder="ZIP code">
+						</div>
+					<div id="ch" style="padding-top: 0.8cm; padding-bottom: 1cm;">
+						<div style="margin-bottom: 0.5cm; color: rgb(32, 76, 196); font-weight:bold; font-size: medium;">Select Soil Type:</div>
+						<select name="soiltype">
+							<option value="Red soil">Red soil</option>
+							<option value="Black soil">Black soil</option>
+							<option value="Laterite soil">Laterite soil</option>
+							<option value="Alluvial soil">Alluvial soil</option>
+							<option value="Clay soil">Clay soil</option>
+							<option value="Loamy soil">Loamy soil</option>
+						</select>
+			
+					</div>
+					<!--
+				<div class="loc">
+					<h3><span>Click allow for us to get your location <br><br> Inorder to suggest you the suitable crop according to the climatic condtions of your region.</span> </h3>
+				</div>
+			
+			<input type="hidden" name="lat" id="lat">
+			<input type="hidden" name="lon" id="lon">
+			-->
+	<div class="mb-3" style="padding:1cm; color: blue;">
+		<input type="submit" value="submit">
+	</div>
+
+	</form>	
+			
+		{{  data }}
+		</center>
+		
+		
+	</div>
+
+	<div id="footer">
+		<div>
+			<p style="color: black;">&copy; 2021 by FarminArms. All rights reserved.</p>
+			<ul>
+				<li>
+					<a href="http://twitter.com/" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="http://facebook.com/" id="facebook">facebook</a>
+				</li>
+				<li>
+					<a href="http://pinterest.com/" id="pinterest">pinterest</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

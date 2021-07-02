@@ -1,0 +1,105 @@
+{% load static %}
+
+<!doctype html>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FARM IN ARMS</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}" media="screen and (max-width : 568px)">
+	
+</head>
+<body>
+	<div id="header"> 
+		<a href="/pages/" class="logo">
+			<img src="{% static 'images/logo.png' %}" alt="">
+		</a>
+		<p id='tex'>Translate to:</p>
+		<div id="gtranslate"></div>
+		
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'gtranslate');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+		<ul id="navigation">
+			<li>
+				<a href="/">home</a>
+			</li>
+			<li class="selected">
+				<a href="/pages/about/">about</a>
+			</li>
+			<li>
+				<a href="/pages/schemes/">Programmes & Schemes</a>
+			</li>
+			<li>
+				<a href="/pages/#services">Services</a>
+			</li>
+			{% if user.is_authenticated %}
+			<div class="dropdown">
+				<button class="dropbtn">Hello, {{user.first_name}}</button>
+				<div class="dropdown-content" style="right:0;">
+				  
+				  <a href="/accounts/logout/">Log out</a>
+				</div>
+			  </div>
+			{% else %}
+			<li>
+				<a href="/accounts/register/">Sign In/Register</a>
+			</li>
+			{% endif %}
+		</ul>
+	</div>
+    <div id="body"> 
+        <div>
+			<img src="{% static 'images/pic7.jpg' %}" style="width: 25cm; height: 12cm;" alt="">
+		</div>
+		<div class="article">
+		<h4>Agriculture is the backbone of the Indian Economy"- said Mahatma Gandhi six decades ago. </h4>
+		<p>	Even today, the situation is still the same, with almost the entire economy being sustained by agriculture,
+			which is the mainstay of the villages. It contributes 16% of the overall GDP and accounts for employment of
+			approximately 52%	of the Indian population. Rapid growth in agriculture is essential not only for self-reliance
+			but also to earn valuable foreign exchange.</p>
+		
+		<p>Indian farmers are second to none in production and productivity despite of the fact that millions are marginal and small farmers. 
+		They adopt improved agriculture technology as efficiently as farmers in developed countries. It is felt that with provision of timely
+		 and adequate inputs such as fertilizers, seeds, pesticides and by making available affordable agricultural credit /crop insurance, 
+		 Indian farmers are going to ensure food and nutritional security to the Nation.It is envisaged to make available relevant information
+		 and services to the farming community and private sector through the use of information and communication technologies, to supplement 
+		 the existing delivery channels provided for by the department. Farmers’ Portal is an endeavour in this direction to create one stop shop
+		 for meeting all informational needs relating to Agriculture sectors production of a farmer.
+		 With this Farmer will not be required to sift through maze of websites created for specific purposes.</p>
+		 
+		 <p>
+		 Once in the Farmers’ Portal,
+		 a farmer will be able to get all relevant information on specific subjects around his village/block /district or state.
+		 This information will be delivered in the form of text, SMS in the language he or she understands. These levels can be
+		 easily reached through the Map of Telangana placed on the Home page. Farmers will also be able to ask specific queries as well as give valuable 
+		 feedback through the Feedback module specially developed for the purpose.</p>
+
+		 </div>
+    </div>
+
+    <div id="footer">
+		<div>
+			<p style="color: black;">&copy; 2021 by FarminArms. All rights reserved.</p>
+			<ul>
+				<li>
+					<a href="http://twitter.com/" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="http://facebook.com/" id="facebook">facebook</a>
+				</li>
+				<li>
+					<a href="http://pinterest.com/" id="pinterest">pinterest</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html> 

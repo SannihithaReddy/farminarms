@@ -1,0 +1,112 @@
+{% load static %}
+
+<!doctype html>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FARM IN ARMS</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}" media="screen and (max-width : 568px)">
+
+    <style>
+        #body ul li a{
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body>
+	<div id="header"> 
+		<a href="/pages/" class="logo">
+			<img src="{% static 'images/logo.png' %}" alt="">
+		</a>
+		<p id='tex'>Translate to:</p>
+		<div id="gtranslate"></div>
+		
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'gtranslate');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+		<ul id="navigation">
+			<li>
+				<a href="/pages/">home</a>
+			</li>
+			<li>
+				<a href="/pages/about/">about</a>
+			</li>
+			<li class="selected">
+				<a href="/schemes">Programmes & Schemes</a>
+			</li>
+			<li>
+				<a href="/pages/#services">Services</a>
+			</li>
+			{% if user.is_authenticated %}
+			<div class="dropdown">
+				<button class="dropbtn">Hello, {{user.first_name}}</button>
+				<div class="dropdown-content" style="right:0;">
+				  
+				  <a href="/accounts/logout/">Log out</a>
+				</div>
+			  </div>
+			{% else %}
+			<li>
+				<a href="/accounts/register/">Sign In/Register</a>
+			</li>
+			{% endif %}
+		</ul>
+	</div> 
+
+    
+        <h3 style="color: red; text-transform: uppercase; margin-left: 7.5cm;">Schemes & Guidelines </h3>
+        <hr class="lin">
+        <div id="bod">
+        <ul id="list">
+            <li>
+                <a href="http://rythubandhu.telangana.gov.in/Default_RB1.aspx" >awareness</a>
+            </li>
+            <li>
+                <a href="{% static 'docs/dmdoc.pdf' %}" >drought management</a>
+            </li>
+            <li>
+                <a href="{% static 'docs/ppdoc.doc' %}" download="">plant protection</a>
+            </li>
+            <li>
+                <a href="{% static 'docs/seeddoc.pdf' %}" download="">seed</a>
+            </li>
+            <li>
+                <a href="{% static 'docs/rainfeddoc.pdf' %}"  >Rainfed Farming System</a>
+            </li>
+            <li>
+                <a href="{% static 'docs/helpdoc.doc' %}" download="">help</a>
+            </li>
+            <li>
+                <a href="{% static 'docs/creditdoc.pdf' %}" download="">credit</a>
+            </li>
+            <li>
+                <a href="{% static 'docs/ecaddoc.pdf' %}">Economic Administration</a>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div id="footer">
+		<div>
+			<p style="color: black;">&copy; 2021 by FarminArms. All rights reserved.</p>
+			<ul>
+				<li>
+					<a href="http://twitter.com/" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="http://facebook.com/" id="facebook">facebook</a>
+				</li>
+				<li>
+					<a href="http://pinterest.com/" id="pinterest">pinterest</a>
+				</li>
+			</ul>
+		</div>
+	</div>

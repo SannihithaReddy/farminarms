@@ -1,0 +1,149 @@
+{% load static %}
+
+<!doctype html>
+<!-- Website Template by freewebsitetemplates.com -->
+<html>
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FARM IN ARMS</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}" media="screen and (max-width : 568px)">
+	<style>
+         
+    </style>
+
+</head>
+<body>
+	<div id="header"> 
+		<a href="/pages/" class="logo">
+			<img src="{% static 'images/logo.png' %}" alt="">
+		</a>
+		<p id='tex'>Translate to:</p>
+		<div id="gtranslate"></div>
+		
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'gtranslate');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+		<ul id="navigation">
+			<li>
+				<a href="/pages/">home</a>
+			</li>
+			<li>
+				<a href="/pages/about/">about</a>
+			</li>
+			<li>
+				<a href="/pages/schemes/">Programmes & Schemes</a>
+			</li>
+			<li>
+				<a href="#services">Services</a>
+			</li>
+			{% if user.is_authenticated %}
+			<div class="dropdown">
+				<button class="dropbtn">Hello, {{user.first_name}}</button>
+				<div class="dropdown-content" style="right:0;">
+				  
+				  <a href="/accounts/logout/">Log out</a>
+				</div>
+			  </div>
+			{% else %}
+			<li>
+				<a href="/accounts/register/">Sign In/Register</a>
+			</li>
+			{% endif %}
+		</ul>
+	</div> 
+    <div id="body">
+	<div>
+        <img src="{% static 'images/rice.jpg' %}" style="width: 15cm; height: 8cm;" alt="">
+    </div>
+    <div class="article">
+    <h4 style="font-weight: bold;">About Rice </h4>
+    <p>	Oryza Sativa, it is believed, is associated with wet, humid climate,
+         though it is not a tropical plant. 
+        It is probably a descendent of wild grass that was most likely cultivated in the foothills of the far Eastern Himalayas. 
+        Another school of thought believes that the rice plant may have originated in southern India, then spread to the north of
+         the country and then onwards to China.
+         It then arrived in Korea, the Philippines (about 2000 B. C.) and then Japan and Indonesia (about 1000 B. C.).The journey of 
+         rice around the world has been slow, but once it took root it 
+         stayed and became a major agriculture and economic product for the people. In the Indian subcontinent more than a quarter of the 
+         cultivated land is given to rice (20011-12). It is a very essential part of the daily meal in the southern and eastern parts of 
+         India. 
+         In the northern and central parts of the subcontinent, where wheat is frequently eaten, rice holds its own and is cooked daily 
+         as well as on festivals and special occasions.</p>
+    
+    <h4 style="font-weight: bold;">Climatic Requirements </h4>
+     
+     <p >
+     Once in the Farmers’ Portal, a farmer will be able to get all relevant information on specific subjects around 
+     his village/block /district or state.This information will be delivered in the form of text, SMS in the language
+      he or she understands. These levels can be easily reached through the Map of Telangana placed on the Home page.
+       Farmers will also be able to ask specific queries as well as give valuable feedback through the Feedback module
+        specially developed for the purpose.</p>
+
+        
+        <h4 style="font-weight: bold;">Nutritional Value </h4>
+     
+     <p >
+        Rice is a nutritional staple food which provides instant energy as its most important component is carbohydrate (starch).
+         On the other hand, rice is poor in nitrogenous substances with average composition of these substances being only 8 per
+          cent and fat content or lipids only negligible, i.e., 1per cent and due to this reason it is considered as a complete
+           food for eating. Rice flour is rich in starch and is used for making various food materials. It is also used in some 
+           instances by brewers to make alcoholic malt. Likewise, rice straw mixed with other materials is used to produce
+            porcelain, glass and pottery. Rice is also used in manufacturing of paper pulp and livestock bedding.The
+             variability of composition and characteristics of rice is really broad and depends on variety and environmental
+              conditions under which the crop is grown. In husked rice, protein content ranges in between 7per cent to 12per cent.
+               The use of nitrogen fertilizers increases the percentage content of some amino acids.</p>
+
+               <h4 style="font-weight: bold;">Crop Production Practices </h4>
+    <p>
+        In India Rice is mainly grown in two types of soils i.e., (i) uplands and (ii) low lands.
+         The method of cultivation of rice in a particular region depends largely on factors such as situation of land, 
+         type of soils, irrigation facilities, availability of labourers intensity and distribution of rainfalls. 
+         The crop of rice is grown with the following methods
+        Dry or Semi-dry upland cultivation
+        Broadcasting the seedSowing the seed behind the plough or drillingWet or lowland cultivation
+        Transplanting in puddled fields.Broadcasting sprouted seeds in puddled fields
+    </p>
+
+    <h4 style="font-weight: bold;">Selection of Seeds </h4>
+    <p>
+        The use of quality seeds in cultivation of rice is an important factor to get better crop yield.
+         Therefore, proper care has to be taken in selecting seeds of the best quality. Much of the success
+          in raising the healthy seedlings depends on the quality of seed. Seeds intended for sowing should
+           satisfy the following requirements
+        The seed should belong to the proper variety, which is proposed to be grown.The seed should be clean and free
+        from obvious mixtures of other seeds.The seed should be mature, well developed and plump in size.The seed 
+        should be free from obvious signs of age or bad storage.The seed should have a high germinating capacity.
+        Before sowing the seed should be treated with fungicides which protects the seed against soil-born fungi 
+       and also give a boost to the seedlings.
+    </p>
+    <br>
+    <br>
+    
+    <a href="https://www.irri.org" style="color: blue; float: left; margin-left: 0.5cm;margin-bottom: 0.5cm;">Click here for more information about rice</a>
+     </div>
+</div>
+	<div id="footer">
+		<div>
+			<p style="color: black;">&copy; 2021 by FarminArms. All rights reserved.</p>
+			<ul>
+				<li>
+					<a href="http://twitter.com/" id="twitter">twitter</a>
+				</li>
+				<li>
+					<a href="http://facebook.com/" id="facebook">facebook</a>
+				</li>
+				<li>
+					<a href="http://pinterest.com/" id="pinterest">pinterest</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

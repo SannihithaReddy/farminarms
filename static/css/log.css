@@ -1,0 +1,56 @@
+
+ body{
+    
+    padding:15px;
+    margin-top:25px;
+    margin-bottom:10px;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.btn{
+    width:5cm;
+    margin-top: 1cm;
+    margin-left: 2.5cm;
+}
+
+
+
+h3{
+    text-align:center;
+}
+.height{
+    height:500px;
+}
+.myform{
+    padding:15px;
+    box-shadow: 2px 2px 8px teal;
+} 
+.logo img{
+    float:center;
+    width:3cm;
+    height:3cm;
+    margin-left: 3.6cm;
+    margin-bottom: 0.5cm;
+    
+}
+.gen{
+    margin-bottom: 0.5cm; 
+}
+.mal{
+    margin-left: 0.5cm;
+}
+#gtranslate{
+	float: top-right;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px; 
+    
+  }
+
+  
