@@ -472,10 +472,12 @@ p a:hover {
 	margin-left: 6.5cm;
 	margin-right: 5cm;
 }
+
 #footer {
 	background: #a5eea5;
 	margin: 0;
 	padding: 36px 0 42px;
+	
 }
 #footer div {
 	margin: 0 auto;

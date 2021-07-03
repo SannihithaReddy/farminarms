@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<!-- Website Template by freewebsitetemplates.com -->
+
 <html>
 <head> 
 	<meta charset="UTF-8">
@@ -9,8 +9,19 @@
 	<title>FARM IN ARMS</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}" media="screen and (max-width : 568px)">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/location.js' %}">  -->
+	<style>
+	.loc{
+	text-align: center;
+	margin-left: 3cm;
 	
-
+	color:teal;
+	}
+	.loc button{
+		float: left;
+		margin-left: 3cm;
+	}
+	</style>
 </head>
 <body>
 	<div id="header"> 
@@ -26,10 +37,11 @@ function googleTranslateElementInit() {
 }
 </script>
 
+	
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 		<ul id="navigation">
-			<li class="selected">
+			<li>
 				<a href="/pages/">home</a>
 			</li>
 			<li>
@@ -56,11 +68,30 @@ function googleTranslateElementInit() {
 			{% endif %}
 		</ul>
 	</div> 
-	<div id="body"> 
-		
-       
+	<div>
+		<center>
+				<form action="" method="post">
+						{% csrf_token %}
+                    Enter ZIP code of the area to get the weather details.
+					<div class="mb-3" style="padding: 20px;">
+						<input type="number" name="zcode" class="form-control" placeholder="ZIP code">
+					
+		                <input type="submit" value="submit">
+	                </div>
 
+	            </form>	
+                <div style="margin-top: 1.5cm;">
+                <p>{{t}}<span style="color: blue;">{{temp}}</span></p>
+                <p>{{p}}<span style="color: blue;">{{pres}}</span></p>
+                <p>{{h}}<span style="color: blue;">{{humd}}</span></p>
+                <p>{{d}}<span style="color: blue;">{{desc}}</span></p>
+                </div>
+		</center>
+		
+
+		
 	</div>
+<!--
 	<div id="footer">
 		<div>
 			<p style="color: black;">&copy; 2021 by FarminArms. All rights reserved.</p>
@@ -77,5 +108,7 @@ function googleTranslateElementInit() {
 			</ul>
 		</div>
 	</div>
+-->
+
 </body>
 </html>

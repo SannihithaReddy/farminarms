@@ -9,19 +9,8 @@
 	<title>FARM IN ARMS</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/new.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}" media="screen and (max-width : 568px)">
-	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/location.js' %}">  -->
-	<style>
-	.loc{
-	text-align: center;
-	margin-left: 3cm;
 	
-	color:teal;
-	}
-	.loc button{
-		float: left;
-		margin-left: 3cm;
-	}
-	</style>
+
 </head>
 <body>
 	<div id="header"> 
@@ -37,7 +26,6 @@ function googleTranslateElementInit() {
 }
 </script>
 
-	
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 		<ul id="navigation">
@@ -68,49 +56,42 @@ function googleTranslateElementInit() {
 			{% endif %}
 		</ul>
 	</div> 
-	<div>
-		<center>
-			
-			
-
-				<form action="" method="post">
-						{% csrf_token %}
-					<div class="mb-3 ">
-					<input type="text" name="cname" class="form-control" placeholder="Town/Village Name">
-					</div>
-					<div class="mb-3" style="padding: 0.5cm;">
-						<input type="number" name="zcode" class="form-control" placeholder="ZIP code">
-						</div>
-					<div id="ch" style="padding-top: 0.8cm; padding-bottom: 1cm;">
-						<div style="margin-bottom: 0.5cm; color: rgb(32, 76, 196); font-weight:bold; font-size: medium;">Select Soil Type:</div>
-						<select name="soiltype">
-							<option value="Red soil">Red soil</option>
-							<option value="Black soil">Black soil</option>
-							<option value="Laterite soil">Laterite soil</option>
-							<option value="Alluvial soil">Alluvial soil</option>
-							<option value="Clay soil">Clay soil</option>
-							<option value="Loamy soil">Loamy soil</option>
-						</select>
-			
-					</div>
-					<!--
-				<div class="loc">
-					<h3><span>Click allow for us to get your location <br><br> Inorder to suggest you the suitable crop according to the climatic condtions of your region.</span> </h3>
-				</div>
-			
-			<input type="hidden" name="lat" id="lat">
-			<input type="hidden" name="lon" id="lon">
-			-->
-	<div class="mb-3" style="padding:1cm; color: blue;">
-		<input type="submit" value="submit">
+	<div id="body">  
+		<table>
+            <tr>
+                <td>
+                    <a href="/weather/rice/"><img style="width: 12cm; height: 8cm; margin-left: 3cm;" src="{% static 'images/rice.jpg' %}" alt=""></a>
+                </td>
+                <td>
+                    <a href="/weather/gnut/"><img style="width: 15cm; height: 10cm; margin-left: 3cm;" src="{% static 'images/gnut.jpg' %}" alt=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/weather/chilli/"><img style="width: 15cm; height: 10cm; margin-left: 3cm;" src="{% static 'images/chili.jpg' %}" alt=""></a>
+                </td>
+                <td>
+                    <a href="/weather/bgram/"><img style="width: 12cm; height: 8cm; margin-left: 3cm;" src="{% static 'images/bgram.jpg' %}" alt=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/weather/cotton/"><img style="width: 12cm; height: 8cm; margin-left: 3cm;" src="{% static 'images/coton.jpg' %}" alt=""></a>
+                </td>
+                <td>
+                    <a href="/weather/maize/"><img style="width: 15cm; height: 10cm; margin-left: 3cm;" src="{% static 'images/corn.jpg' %}" alt=""></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/weather/scane/"><img style="width: 15cm; height: 10cm; margin-left: 3cm;" src="{% static 'images/scane.jpg' %}" alt=""></a>
+                </td>
+                <td>
+                    <a href="/weather/sbean/"><img style="width: 12cm; height: 8cm; margin-left: 3cm;" src="{% static 'images/sbean.jpg' %}" alt=""></a>
+                </td>
+            </tr>
+        </table>
 	</div>
-
-	</form>	
-		</center>
-		
-		
-	</div>
-
 	<div id="footer">
 		<div>
 			<p style="color: black;">&copy; 2021 by FarminArms. All rights reserved.</p>

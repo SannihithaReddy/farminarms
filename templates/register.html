@@ -50,13 +50,13 @@ new google.translate.TranslateElement({pageLanguage: 'en'}, 'gtranslate');
 						{% csrf_token %}
 
 						<div class="mb-3 ">
-						<input type="text" name="fname" class="form-control" placeholder="First Name">
+						<input type="text" name="fname" class="form-control" placeholder="First Name" minlength="3" maxlength="20" >
 						</div>
 						<div class="mb-3 ">
-						<input type="text" name="lname" class="form-control" placeholder="Last Name">
+						<input type="text" name="lname" class="form-control" placeholder="Last Name" minlength="3" maxlength="20">
 						</div>
 						<div class="mb-3 ">
-							<input type="tel" name="phn" class="form-control" placeholder="10-digit Mobile Number">
+							<input type="tel" name="phn" class="form-control" placeholder="10-digit Mobile Number" pattern="[0-9]{10}">
 						</div>
 						 
 						<div class="mb-3 ">

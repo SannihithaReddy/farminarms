@@ -1,0 +1,22 @@
+.nbar a{
+    text-decoration: none;
+    margin-left: 0.5cm;
+    padding: 7px;
+    
+}
+.nbar a:hover{
+    background-color: teal;
+    color: white;
+}
+.bod img{
+    width:50%;
+    height: 10cm;
+    margin-top: 0.5cm;
+    margin-right: 50%;
+}
+.nam , .bod div h3{
+    color: rgb(77, 4, 26);
+}
+.bod p{
+    color: blue;
+}

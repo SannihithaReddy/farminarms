@@ -5,13 +5,15 @@ from accounts.models import User
 # Create your models here.
 class location(models.Model):
     name = models.CharField(max_length=20, null=False)
+    zipcode = models.IntegerField(null=True,blank=True)
     temp = models.FloatField(null=True)
     soilt = models.CharField(max_length=20,null=True)
     humd = models.FloatField(null=True)
     desc = models.CharField(max_length=50,null=True)
     precip = models.FloatField(null=True)
-    lat = models.FloatField(null=True)
-    lon = models.FloatField(null=True)
+    lat = models.FloatField(null=True,blank=True)
+    lon = models.FloatField(null=True,blank=True)
+    
 
     cust = models.ForeignKey(User,on_delete=models.DO_NOTHING,null=True)
 
