@@ -35,9 +35,9 @@ def det(request):
         #dest=crop.objects.raw(qry)
         #dest=crop.objects.raw('select * from crop where cmintemp<temp and cmaxtemp>temp;')[0]
 
-        dest = crop.objects.filter(Q(cmintemp__lte = temp) & Q(cmaxtemp__gte = temp) &
-         Q(cminhum__lte = humd) & Q(cmaxhum__gte = humd) & Q(csoiltype = soilt))
-        #print(dest)
+        dest = crop.objects.filter(Q(cmintemp__lte = temp) & Q(cmaxtemp__gte = temp) & 
+        Q(cminhum__lte = humd) & Q(cmaxhum__gte = humd) & Q(csoiltype = soilt))
+        
         #return redirect('/weather/suggest/')
         return render(request,'dispcrop.html',{'dest':dest})
     else:
